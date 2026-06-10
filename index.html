@@ -1,1 +1,150 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Da Semente ao Prato</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Botão de acessibilidade -->
+    <div class="acessibilidade">
+        <button id="aumentarFonte">A+</button>
+        <button id="diminuirFonte">A-</button>
+        <button id="altoContraste">Contraste</button>
+    </div>
+
+    <header>
+        <h1>Da Semente ao Prato</h1>
+        <p>
+            Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente
+        </p>
+
+        <nav>
+            <ul>
+                <li><a href="#problema">O Problema</a></li>
+                <li><a href="#simulador">Simulador</a></li>
+                <li><a href="#fiscalizacao">Fiscalização</a></li>
+                <li><a href="#denuncia">Denúncias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="banner">
+            <h2>O futuro da agricultura depende da floresta em pé</h2>
+
+            <p>
+                O desmatamento afeta o clima, a biodiversidade,
+                as chuvas e a produção de alimentos.
+            </p>
+        </section>
+
+        <section id="problema">
+            <article>
+                <h2>O Problema</h2>
+
+                <p>
+                    O desmatamento é um dos maiores desafios ambientais da atualidade.
+                    A retirada da vegetação reduz a biodiversidade,
+                    altera o clima e prejudica a produção agrícola.
+                </p>
+
+                <p>
+                    Preservar as florestas é essencial para garantir um futuro
+                    sustentável para as próximas gerações.
+                </p>
+            </article>
+        </section>
+
+        <section id="simulador">
+            <article>
+                <h2>Simulador de Impacto Climático</h2>
+
+                <p>
+                    Arraste a barra para definir o percentual de floresta desmatada.
+                </p>
+
+                <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="0"
+                    id="sliderDesmatamento"
+                >
+
+                <h3 id="percentual">0% de desmatamento</h3>
+
+                <div class="painel-indicadores">
+
+                    <div class="card">
+                        <h4>Temperatura</h4>
+                        <p id="temperatura">+1,5°C</p>
+                    </div>
+
+                    <div class="card">
+                        <h4>Chuvas</h4>
+                        <p id="chuvas">100%</p>
+                    </div>
+
+                    <div class="card">
+                        <h4>Biodiversidade</h4>
+                        <p id="biodiversidade">100%</p>
+                    </div>
+
+                    <div class="card">
+                        <h4>Preço dos alimentos</h4>
+                        <p id="alimentos">100%</p>
+                    </div>
+
+                </div>
+
+                <div id="alerta"></div>
+            </article>
+        </section>
+
+        <section id="fiscalizacao">
+            <article>
+                <h2>Fiscalização e Resultados</h2>
+
+                <p>
+                    O monitoramento por satélite permite identificar áreas
+                    desmatadas e combater crimes ambientais.
+                </p>
+
+                <p>
+                    A fiscalização eficiente contribui para a recuperação
+                    de áreas degradadas e para a preservação dos biomas.
+                </p>
+            </article>
+        </section>
+
+        <section id="denuncia">
+            <article>
+                <h2>Guia de Denúncias e Ação</h2>
+
+                <p>
+                    Caso identifique crimes ambientais, procure os órgãos
+                    responsáveis para realizar uma denúncia.
+                </p>
+
+                <button>Saiba Como Denunciar</button>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            Projeto Agrinho 2026 - Da Semente ao Prato
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
