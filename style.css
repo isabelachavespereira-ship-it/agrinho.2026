@@ -1,1 +1,72 @@
+// Controle do simulador
 
+const slider = document.getElementById("sliderDesmatamento");
+
+const percentual = document.getElementById("percentual");
+const temperatura = document.getElementById("temperatura");
+const chuvas = document.getElementById("chuvas");
+const biodiversidade = document.getElementById("biodiversidade");
+const alimentos = document.getElementById("alimentos");
+const alerta = document.getElementById("alerta");
+
+slider.addEventListener("input", function(){
+
+    let valor = Number(slider.value);
+
+    percentual.textContent =
+        valor + "% de desmatamento";
+
+    temperatura.textContent =
+        "+" + (1.5 + valor * 0.025).toFixed(1) + "°C";
+
+    chuvas.textContent =
+        Math.max(0, 100 - valor) + "%";
+
+    biodiversidade.textContent =
+        Math.max(0, 100 - valor) + "%";
+
+    alimentos.textContent =
+        (100 + valor) + "%";
+
+    if(valor >= 30){
+
+        alerta.textContent =
+        "ALERTA: Nível crítico de desmatamento. O clima, a biodiversidade e a produção agrícola estão ameaçados.";
+
+    }else{
+
+        alerta.textContent = "";
+    }
+
+});
+
+// Acessibilidade
+
+let tamanhoFonte = 16;
+
+document
+.getElementById("aumentarFonte")
+.addEventListener("click", () => {
+
+    tamanhoFonte += 2;
+
+    document.body.style.fontSize =
+    tamanhoFonte + "px";
+});
+
+document
+.getElementById("diminuirFonte")
+.addEventListener("click", () => {
+
+    tamanhoFonte -= 2;
+
+    document.body.style.fontSize =
+    tamanhoFonte + "px";
+});
+
+document
+.getElementById("altoContraste")
+.addEventListener("click", () => {
+
+    document.body.classList.toggle("alto-contraste");
+});
